@@ -6,6 +6,10 @@
 * ファームウェアは、[squeezelite-esp32](https://github.com/sle118/squeezelite-esp32)を使用させていただきます。
   * https://github.com/sle118/squeezelite-esp32
 
+## ☆現在 試作して確認中です。★
+
+![image](image/PCB-WROVER-I2S.png)
+
 ## 参考
 * [ESP32でBluetooth／AirPlayスピーカーを作る](https://note.com/6ihwd/n/ncfccd1f401a1)
 * [squeezelite-esp32](https://github.com/sle118/squeezelite-esp32
