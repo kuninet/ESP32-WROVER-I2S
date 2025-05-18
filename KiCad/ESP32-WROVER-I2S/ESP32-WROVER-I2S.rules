@@ -1,0 +1,99 @@
+
+(rules PCB ESP32-WROVER-I2S
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 221)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.5)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.7)
+    )
+  )
+  (rule
+    (width 200.0)
+    (clear 200.0)
+    (clear 100.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_600:300_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:300_um" "Via[0-1]_600:300_um" default
+  )
+  (via 
+    "Via[0-1]_600:300_um-kicad_default" "Via[0-1]_600:300_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_600:300_um-BOLD" "Via[0-1]_600:300_um" BOLD
+  )
+  (via_rule
+    default "Via[0-1]_600:300_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:300_um-kicad_default"
+  )
+  (via_rule
+    BOLD "Via[0-1]_600:300_um-BOLD"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(A1-DIN)" "unconnected-(A1-XSMT-Pad13)" "unconnected-(A1-DEMP-Pad14)" "unconnected-(A1-A3V3-Pad11)" "unconnected-(A1-FMT-Pad12)" "Net-(A1-LOUT)" "Net-(J2-Pin_2)" "Net-(A1-LCK)"
+    "unconnected-(A1-FLT-Pad15)" "Net-(A1-BCK)" "unconnected-(A1-SCK-Pad1)" "unconnected-(A1-AGND-Pad10)" "Net-(A1-ROUT)" /EN /GPIO0 "Net-(D1-A)"
+    "/SENSE_VN" /GPIO5 /GPIO18 /GPIO12 /GPIO21 /GPIO19 /GPIO35 /GPIO22
+    /GPIO34 /GPIO4 /GPIO15 /GPIO14 "/SENSE_VP" /GPIO13 /GPIO33 /GPIO23
+    "unconnected-(J3-SBU2-PadB8)" /DN /DP "Net-(J3-CC1)" "unconnected-(J3-SBU1-PadA8)" "Net-(J3-CC2)" /RTS /DTR
+    /GPIO2 "unconnected-(U1-CMD_IO11-Pad19)" /TxD0 "unconnected-(U1-IO16-Pad27)" "unconnected-(U1-SD1_IO8-Pad22)" "unconnected-(U1-SD3_IO10-Pad18)" /RxD0 "unconnected-(U1-SD0_IO7-Pad21)"
+    "unconnected-(U1-SD2_IO9-Pad17)" "unconnected-(U1-CLK_IO6-Pad20)" "unconnected-(U1-IO17-Pad28)" "unconnected-(U1-NC-Pad32)" "unconnected-(U3-~{CTS}-Pad5)" /GPIO32
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class BOLD
+    GND +3.3V +5V "Net-(F1-Pad1)"
+    (clearance_class BOLD)
+    (via_rule BOLD)
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
