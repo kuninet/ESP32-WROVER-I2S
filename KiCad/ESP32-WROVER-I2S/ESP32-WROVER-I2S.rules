@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 221)
+    (start_pass_no 3003)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -73,9 +73,8 @@
     "unconnected-(A1-FLT-Pad15)" "Net-(A1-BCK)" "unconnected-(A1-SCK-Pad1)" "unconnected-(A1-AGND-Pad10)" "Net-(A1-ROUT)" /EN /GPIO0 "Net-(D1-A)"
     "/SENSE_VN" /GPIO5 /GPIO18 /GPIO12 /GPIO21 /GPIO19 /GPIO35 /GPIO22
     /GPIO34 /GPIO4 /GPIO15 /GPIO14 "/SENSE_VP" /GPIO13 /GPIO33 /GPIO23
-    "unconnected-(J3-SBU2-PadB8)" /DN /DP "Net-(J3-CC1)" "unconnected-(J3-SBU1-PadA8)" "Net-(J3-CC2)" /RTS /DTR
     /GPIO2 "unconnected-(U1-CMD_IO11-Pad19)" /TxD0 "unconnected-(U1-IO16-Pad27)" "unconnected-(U1-SD1_IO8-Pad22)" "unconnected-(U1-SD3_IO10-Pad18)" /RxD0 "unconnected-(U1-SD0_IO7-Pad21)"
-    "unconnected-(U1-SD2_IO9-Pad17)" "unconnected-(U1-CLK_IO6-Pad20)" "unconnected-(U1-IO17-Pad28)" "unconnected-(U1-NC-Pad32)" "unconnected-(U3-~{CTS}-Pad5)" /GPIO32
+    "unconnected-(U1-SD2_IO9-Pad17)" "unconnected-(U1-CLK_IO6-Pad20)" "unconnected-(U1-IO17-Pad28)" "unconnected-(U1-NC-Pad32)" /GPIO32
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
@@ -86,7 +85,7 @@
     )
   )
   (class BOLD
-    GND +3.3V +5V "Net-(F1-Pad1)"
+    GND +3.3V +5V "Net-(D3-A)" "Net-(J3-Pin_1)"
     (clearance_class BOLD)
     (via_rule BOLD)
     (rule
